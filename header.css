@@ -182,8 +182,11 @@ header{
 .menuPoint:hover{
     background-color: black;
 }
+.mottoWrapper{
+    margin: auto;
+}
 .motto{
-    margin:auto;
+    margin:2rem;
     text-align: center;
     padding: 2rem;
     border-radius: 1rem;
@@ -199,9 +202,15 @@ header{
         display: flex;
     }
     .motto{
+        padding: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
 }
-  
-  
+@media (max-width: 600px) {
+    .motto{
+        padding: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
