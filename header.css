@@ -188,6 +188,7 @@ header{
     padding: 2rem;
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 45%);
+    max-width: 90vw;
 }
 
 @media (max-width: 470px) {
@@ -196,6 +197,10 @@ header{
     }
     .navbarSmallScreen{
         display: flex;
+    }
+    .motto{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
   
