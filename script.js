@@ -31,7 +31,13 @@ $("document").ready(()=>{
             resetMenu()
         }
     });
-
+    window.addEventListener("keydown", e=>{
+        console.log(e)
+        if(e.key ==="Enter" && tilToppAktiv){
+            $(window).scrollTop(0);
+            tilToppKanpp.removeClass("tilToppAktiv")
+        }
+    })
 
     window.onscroll = ()=>{
         if(this.oldScroll > this.scrollY && !tilToppAktiv){
