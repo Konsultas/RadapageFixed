@@ -52,7 +52,7 @@ header{
     color: white;
     background-image: url("./resources/RadaHeader.jpeg") ;
     background-size: cover;
-    height: 52vh;
+    min-height: 52vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -182,7 +182,13 @@ header{
 .menuPoint:hover{
     background-color: black;
 }
-
+.motto{
+    margin:auto;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 45%);
+}
 
 @media (max-width: 470px) {
     .navBar{
