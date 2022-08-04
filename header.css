@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family:sans-serif;
+    line-height: 1.3rem;
+}
+h1,h2,h3{
+    line-height: initial;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+p,span,h2,h3{
+    color: white;
+}
+.redLine{
+    background-color: red;
+    width: 5rem;
+    height: 2px;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+.tilTopp{
+    visibility: hidden;
+    color: white;
+    padding: 0.5rem;
+    position: fixed;
+    bottom:0rem;
+    right: 2rem;
+    opacity: 0%;
+    background-color: rgba(45, 45, 45, 0.65);
+    transition: all .3s ease-out;
+    border: white 1px solid;
+}
+.tilToppAktiv{
+    opacity: 100%;
+    visibility:visible;
+    transform: translateY(-3rem);
+    display: block;
+}
+
+/*-----------------HEADER---------------*/
+header{
+    color: white;
+    background-image: url("./resources/RadaHeader.jpeg") ;
+    background-size: cover;
+    height: 52vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: 38% 59%;
+}
+#skipToContent{
+    background-color: white;
+    color: rgb(212, 7, 7);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    top: 0;
+    left: 0;
+}
+#skipToContent:focus{
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.navfelt{
+    background-color: rgba(0, 0, 0, 45%);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+.companyLogo{
+    width: 10rem;
+}
+.navBar{
+    display: flex;
+    gap: 1rem;
+    transition: all .3s ease;
+    
+}
+.navBar a{
+    position: relative;
+    height: 1.2rem;
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease;
+    transition-delay: 0s;
+}
+.navBar a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: white;
+    left:0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 150ms ease-in;
+}
+.navBar a:hover::after{
+    transform: scaleX(1);
+}
+
+.navContainer{
+    display: flex;
+    justify-content: center;
+}
+.navbarSmallScreen{
+    display:none;
+    height: 2.2rem;
+    background: none;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 3rem;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+.navbarSmallScreenActive :nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+    width: 20px;
+}
+.navbarSmallScreenActive :nth-child(2) {
+   display: none;
+}
+.navbarSmallScreenActive :nth-child(3) {
+    transform: rotate(315deg);
+    width: 20px;
+    top: -2px;
+}
+
+.hamburgerBar{
+    transition: all .1s ease;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    position: relative;
+    display: block;
+    border-radius: 2px;
+    width: 15px;
+    height: 2px;
+    background-color: white;
+}
+.menu{
+    display: none;
+}
+.menuActive{
+    background-color: rgba(0, 0, 0, 45%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 4.8rem;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+.menuPoint{
+    padding: 1rem;
+}
+.menuPoint:hover{
+    background-color: black;
+}
+
+
+@media (max-width: 470px) {
+    .navBar{
+        display: none;
+    }
+    .navbarSmallScreen{
+        display: flex;
+    }
+}
+  
+  

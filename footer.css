@@ -1,0 +1,25 @@
+
+footer{
+    padding: 2rem;
+    width: 100%;
+    min-height: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ebebeb;
+    gap: 1rem;
+}
+footer a{
+    color: black;
+}
+footer h2,footer span{
+    color: black;
+}
+
+footer section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
