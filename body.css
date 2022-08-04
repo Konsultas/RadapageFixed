@@ -120,7 +120,7 @@ main{
         flex-direction: column;
     }
     .profilBilde{
-        width: 80vw;
+        width: 100%;
     }
     #jobbeHer{
         padding: 0;
