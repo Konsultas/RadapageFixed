@@ -32,7 +32,6 @@ $("document").ready(()=>{
         }
     });
     window.addEventListener("keydown", e=>{
-        console.log(e)
         if(e.key ==="Enter" && tilToppAktiv){
             $(window).scrollTop(0);
             tilToppKanpp.removeClass("tilToppAktiv")
