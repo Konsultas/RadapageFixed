@@ -8,7 +8,6 @@ body{
 }
 main{
     padding: 2rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,14 +45,16 @@ main{
 }
 
 .joinTheTeam{
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
 }
 .joinTheTeam p{
-    width:70%;
     text-align: center;
 }
 
@@ -102,7 +103,7 @@ main{
 
 
 @media (max-width: 1080px) {
-    main{
+    main, .joinTheTeam, #jobbeHer{
         width: 100%;
     }
     .profilBilde{
@@ -117,7 +118,6 @@ main{
         width: 100%;
     }
     #jobbeHer{
-        padding: 0;
         flex-direction: column;
     }
     #jobbeHer > *{
