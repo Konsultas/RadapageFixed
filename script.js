@@ -1,35 +1,29 @@
 $("document").ready(()=>{
-    
-    
     const navknapp = $("#navSmallScreen")
     const menu = $(".menu")
     const tilToppKanpp =  $(".tilTopp")
+    const children = $(".menuPoint")
+
     let barAktiv = false
     let tilToppAktiv = false
 
     const resetMenu = ()=>{
         menu.removeClass("menuActive")
         navknapp.removeClass("navbarSmallScreenActive")
-        barAktiv=false
+        return false
     }
     const openMenu = ()=>{
+        console.log("hei")
         navknapp.addClass("navbarSmallScreenActive")
         menu.addClass("menuActive")
-        barAktiv=true
-    }
-
-    navknapp.click(() => {
-        barAktiv ? resetMenu() : openMenu()
-    }); 
-    const children = $(".menuPoint")
+        return true
+    } 
     children.click(()=>{
         resetMenu()
     })
-    $("window").click()
-    window.addEventListener('mouseup', (e)=>{
-        if(e.target.className !== "hamburgerBar"){   
-            resetMenu()
-        }
+    window.addEventListener('mouseup', (e)=>{ 
+        if((e.target.className+"").split(" ")[1] === "hamburgerBtn" && !barAktiv) barAktiv = openMenu()
+        else barAktiv = resetMenu()
     });
     window.addEventListener("keydown", e=>{
         if(e.key ==="Enter" && tilToppAktiv){
