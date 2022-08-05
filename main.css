@@ -45,13 +45,10 @@ main{
 }
 
 .joinTheTeam{
-    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
     gap: 1rem;
 }
 .joinTheTeam p{
@@ -64,8 +61,6 @@ main{
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    width: 70%;
-    padding: 2rem;
 }
 
 #jobbeHer > *{
@@ -80,30 +75,10 @@ main{
     gap:1rem
 }
 
-.samarbeidspartnere{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-.samarbeidspartnere img{
-    max-width: 80%;
-}
-.samarbeidspartnere div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-.samarbeidspartnere >h2{
-    text-align: center;
-}
 
 
 @media (max-width: 1080px) {
-    main, .joinTheTeam, #jobbeHer{
+    main{
         width: 100%;
     }
     .profilBilde{
