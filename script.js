@@ -8,12 +8,13 @@ $("document").ready(()=>{
     let tilToppAktiv = false
 
     const resetMenu = ()=>{
+        navknapp.attr(aria-expanded) = false;
         menu.removeClass("menuActive")
         navknapp.removeClass("navbarSmallScreenActive")
         return false
     }
     const openMenu = ()=>{
-        console.log("hei")
+        navknapp.attr(aria-expanded) = true;
         navknapp.addClass("navbarSmallScreenActive")
         menu.addClass("menuActive")
         return true
