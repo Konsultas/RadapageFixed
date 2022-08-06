@@ -42,6 +42,7 @@ $("document").ready(()=>{
         else if(this.oldScroll < this.scrollY){
             tilToppKanpp.removeClass("tilToppAktiv")
             tilToppAktiv=false
+            if(barAktiv) barAktiv=resetMenu()
         }
         this.oldScroll = this.scrollY;
         }
