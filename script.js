@@ -8,13 +8,11 @@ $("document").ready(()=>{
     let tilToppAktiv = false
 
     const resetMenu = ()=>{
-        navknapp.attr(aria-expanded) = false;
         menu.removeClass("menuActive")
         navknapp.removeClass("navbarSmallScreenActive")
         return false
     }
     const openMenu = ()=>{
-        navknapp.attr(aria-expanded) = true;
         navknapp.addClass("navbarSmallScreenActive")
         menu.addClass("menuActive")
         return true
@@ -23,8 +21,11 @@ $("document").ready(()=>{
         resetMenu()
     })
     window.addEventListener('mouseup', (e)=>{ 
-        if((e.target.className+"").split(" ")[1] === "hamburgerBtn" && !barAktiv) barAktiv = openMenu()
-        else barAktiv = resetMenu()
+        let result = false
+        if((e.target.className+"").split(" ")[1] === "hamburgerBtn" && !barAktiv) result = openMenu()
+        else result = resetMenu()
+        navknapp.attr("aria-expanded", result)
+        barAktiv = result
     });
     window.addEventListener("keydown", e=>{
         if(e.key ==="Enter" && tilToppAktiv){
