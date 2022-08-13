@@ -14,27 +14,33 @@
 
 <body>
     <a tabindex="0" class="tilTopp" href="#topp">Til topp</a>
+    <a id="skipToContent" tabindex="1" href="#innledning">HOPP TIL INNHOLD</a>  
+
     <header>
-        <a id="skipToContent" tabindex="1" href="#innledning">HOPP TIL INNHOLD</a>  
         <div id="topp" class="navfelt">
             <a href="index.html"><img class="companyLogo" src="./resources/radaLogo.png" alt="Rada consulting-logo"></img></a>
-            <nav class="navBar">
-                <a role="button" href="#innledning">Om Oss</a>
-                <a role="button" href="#jobbeHer">Jobbe Her?</a>
-                <a role="button" href="#footer">Kontakt</a>
+            <nav >
+                <ul class="navBar">
+                    <li><a role="button" href="#innledning">Om Oss</a></li>
+                    <li><a role="button" href="#jobbeHer">Jobbe Her?</a></li>
+                    <li><a role="button" href="#footer">Kontakt</a></li>
+                </ul>
+                <div class="navContainer">
+                    <button aria-label="Hovedmeny" aria-expanded="false" id="navSmallScreen" class="navbarSmallScreen hamburgerBtn">
+                        <span class="hamburgerBar hamburgerBtn"></span>
+                        <span class="hamburgerBar hamburgerBtn"></span>
+                        <span class="hamburgerBar hamburgerBtn"></span>
+                    </button>
+                    <ul  class="menu">
+                        <a role="button" class="menuPoint"   href="#innledning">Om Oss</a>
+                        <a role="button" class="menuPoint"  href="#jobbeHer">Jobbe Her?</a>
+                        <a role="button" class="menuPoint"  href="#footer">Kontakt</a>
+                    </ul>  
+                </div>
+               
+                
             </nav>
-            <nav class="navContainer">
-                <button aria-label="Hovedmeny" aria-expanded="false" id="navSmallScreen" class="navbarSmallScreen hamburgerBtn">
-                    <span class="hamburgerBar hamburgerBtn"></span>
-                    <span class="hamburgerBar hamburgerBtn"></span>
-                    <span class="hamburgerBar hamburgerBtn"></span>
-                </button>
-                <nav  class="menu">
-                    <a role="button" class="menuPoint"   href="#innledning">Om Oss</a>
-                    <a role="button" class="menuPoint"  href="#jobbeHer">Jobbe Her?</a>
-                    <a role="button" class="menuPoint"  href="#footer">Kontakt</a>
-                </nav>  
-            </nav>
+           
         </div>
         <div class="mottoWrapper">
             <h1 class="motto">

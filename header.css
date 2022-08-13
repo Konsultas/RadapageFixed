@@ -92,7 +92,7 @@ header{
     display: flex;
     gap: 1rem;
     transition: all .3s ease;
-    
+    list-style-type: none;
 }
 .navBar a{
     position: relative;
