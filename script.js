@@ -45,7 +45,7 @@ $("document").ready(()=>{
             tilToppAktiv=false
             if(barAktiv && this.scrollY > h) barAktiv=resetMenu()
         }
-        if(this.scrollY < h){
+        if( this.scrollY < h ){
             tilToppKanpp.removeClass("tilToppAktiv")
             tilToppAktiv=false
         }
