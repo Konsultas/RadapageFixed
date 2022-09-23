@@ -35,14 +35,19 @@ $("document").ready(()=>{
     })
 
     window.onscroll = ()=>{
-        if(this.oldScroll > this.scrollY && !tilToppAktiv){
+        const h =  window.innerHeight
+        if(this.oldScroll > this.scrollY && !tilToppAktiv && this.scrollY > h){
             tilToppKanpp.addClass("tilToppAktiv")
             tilToppAktiv= true
         }
         else if(this.oldScroll < this.scrollY){
             tilToppKanpp.removeClass("tilToppAktiv")
             tilToppAktiv=false
-            if(barAktiv) barAktiv=resetMenu()
+            if(barAktiv && && this.scrollY > h) barAktiv=resetMenu()
+        }
+        if(this.scrollY < h){
+            tilToppKanpp.removeClass("tilToppAktiv")
+            tilToppAktiv=false
         }
         this.oldScroll = this.scrollY;
         }
