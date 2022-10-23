@@ -50,7 +50,7 @@ p,span,h2,h3{
 /*-----------------HEADER---------------*/
 header{
     color: white;
-    background-image: url("./resources/RadaHeader.jpeg") ;
+    background-image: url("../public/resources/RadaHeader.jpeg") ;
     background-size: cover;
     min-height: 52vh;
     width: 100%;

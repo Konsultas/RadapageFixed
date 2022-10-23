@@ -26,23 +26,8 @@ main{
     line-height: 1.4rem;
     text-align: center;
 }
-.ansattIntroduksjon{
-    margin-bottom: 3rem;
-}
 
-.profil{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.profilBilde{
-    width:30rem;
-}
-.profilBeskrivelse{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+
 
 .joinTheTeam{
     display: flex;
