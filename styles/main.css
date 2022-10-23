@@ -1,20 +1,5 @@
 
-body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-}
-main{
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    width: 70%;
-}
+
 #innledning {
     display: flex;
     flex-direction: column;
@@ -66,17 +51,8 @@ main{
     main{
         width: 100%;
     }
-    .profilBilde{
-        width: 50vw;
-    }
 }
 @media (max-width: 720px) {
-    .profil{
-        flex-direction: column;
-    }
-    .profilBilde{
-        width: 100%;
-    }
     #jobbeHer{
         flex-direction: column;
     }

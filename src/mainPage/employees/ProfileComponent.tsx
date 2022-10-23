@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/future/image"
 import { FC } from "react"
 import style from "../../../styles/mainPageStyles/ProfileComponent.module.scss"
 interface Props{
@@ -11,9 +11,8 @@ interface Props{
 export const ProfileComponent:FC<Props> = (props:Props)=>{
     return( 
         <section className={style.profil}>
-            <div className={style.profilBilde}>
-                <Image layout="fill" objectFit="contain"  src={props.imgPath} alt=""/>
-            </div>
+            <Image className={style.profilBilde} src={props.imgPath} alt=""/>
+         
            
             <span className={style.profilBeskrivelse}>
                 <div>

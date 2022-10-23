@@ -5,7 +5,7 @@ import { Header } from '../mainPage/header/Header'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="body">
     <Header></Header>
     <a tabIndex={0} className="tilTopp" href="#topp">Til topp</a>
       <a id="skipToContent" tabIndex={1} href="#innledning">HOPP TIL INNHOLD</a>
