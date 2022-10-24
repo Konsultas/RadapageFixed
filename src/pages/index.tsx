@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import {Profiles} from '../mainPage/employees/Profiles'
 import { Header } from '../mainPage/header/Header'
 
