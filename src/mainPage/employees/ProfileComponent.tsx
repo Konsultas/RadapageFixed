@@ -1,6 +1,6 @@
 import Image from "next/future/image"
 import { FC } from "react"
-import style from "../../../styles/mainPageStyles/ProfileComponent.module.scss"
+import style from "@/styles/mainPageStyles/ProfileComponent.module.scss"
 interface Props{
     imgPath:string
     name: string,
