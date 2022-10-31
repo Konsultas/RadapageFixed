@@ -2,12 +2,35 @@ import type { NextPage } from 'next';
 import { Layout } from 'src/components/Layout';
 import { Profiles } from '../mainPage/employees/Profiles';
 import styles from '@/styles/Home.module.scss';
+import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
+    const [hasScrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+       const onScroll: EventListener = (event: Event) => {
+            if(window.scrollY > 0) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+            
+       };
+
+       window.addEventListener('scroll', onScroll);
+
+       return () => window.removeEventListener('scroll', onScroll);
+    })
+
+
   return (
     <Layout>
         <div className="body">
-        <a tabIndex={0} className="tilTopp" href="#topp">Til topp</a>
+            {hasScrolled && (
+                <p className={styles.buttonContainer}>
+                <button tabIndex={0} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={styles.scroll}>Til topp</button>
+            </p>
+            )}
         <a id="skipToContent" tabIndex={1} href="#innledning">HOPP TIL INNHOLD</a>
         <main className={styles.main}>
             <section id="innledning" className={styles.intro}>
