@@ -1,0 +1,49 @@
+.footer{
+    width: 100%;
+
+    h2, span, a {
+        color: black;
+    }
+ }
+
+ .partners {
+     display: flex;
+     flex-direction: column;
+     padding-bottom: 2rem;
+     gap: 2rem;
+     background-color: black;
+
+     img {
+        max-width: 80%;
+     }
+
+     div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+
+     >h2 {
+        color: white;
+        text-align: center;
+     }
+ }
+ 
+ .contact{
+     padding: 2rem;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     background-color: #ebebeb;
+     gap: 1rem;
+
+     div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+ }
+ 
