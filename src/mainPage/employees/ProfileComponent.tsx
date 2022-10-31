@@ -4,7 +4,7 @@ import style from "@/styles/mainPageStyles/ProfileComponent.module.scss"
 interface Props{
     imgPath:string
     name: string,
-    tittle: string
+    title: string
     description: string[]
 }
 
@@ -17,7 +17,7 @@ export const ProfileComponent:FC<Props> = (props:Props)=>{
             <span className={style.profilBeskrivelse}>
                 <div>
                     <h3>{props.name}</h3>
-                    <p>{props.tittle}</p>
+                    <p>{props.title}</p>
                     
                 </div>
                 {props.description.map((el, index) => <p key={`profile${index}`}>{el}</p>)}

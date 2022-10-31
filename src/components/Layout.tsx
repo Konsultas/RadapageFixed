@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Header } from "src/mainPage/header/Header";
+import { Header } from "src/components/Header";
 import styles from '@/styles/Layout.module.scss';
 import { Footer } from "./Footer";
 interface Props {

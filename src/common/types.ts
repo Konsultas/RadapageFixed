@@ -1,6 +1,6 @@
 export interface ProfileMeta {
     description:string[],
     imgPath:string,
-    tittle:string,
+    title:string,
     name:string
 }

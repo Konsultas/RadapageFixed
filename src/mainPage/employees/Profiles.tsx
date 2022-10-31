@@ -11,7 +11,7 @@ export const Profiles: FC = () => {
                 key={index + "profile"}
                 description={el.description}
                 imgPath={el.imgPath}
-                tittle={el.tittle}
+                title={el.title}
                 name={el.name}
             />
         })}

@@ -20,7 +20,7 @@ const Home: NextPage = () => {
                     Vi har det morsomt på jobb fordi karriereutvikling skjer best med lave skuldre</p>
             </section>
             <span className={styles.redLine}></span>
-            <Profiles></Profiles>
+            <Profiles />
             <span className={styles.redLine}></span>
             <section className={styles.joinTheTeam}>
                 <h2>Join the team!</h2>

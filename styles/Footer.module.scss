@@ -45,5 +45,11 @@
         justify-content: center;
         align-items: center;
      }
+
+     a {
+        &:hover {
+            text-decoration: underline;
+        }     
+     }
  }
  
