@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 
     useEffect(() => {
        const onScroll: EventListener = (event: Event) => {
-            if(window.scrollY > 0) {
+            if(window.scrollY > 200) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
