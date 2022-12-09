@@ -1,23 +1,18 @@
 import { NextComponentType } from "next";
 import Image from "next/image";
 import styles from '@/styles/Footer.module.scss';
-
+import { partnersMeta } from "./PartnersMeta";
+import { Partners } from "./Partners";
 export const Footer:NextComponentType = () => {
     return (
         <footer className={styles.footer}>
-        <section className={styles.partners}>
-           <h2>Noen av våre nåværende og tidligere kunder</h2>
-           <div>
-                <Image src={require("../../../public/resources/SPAREBANK_LOGO.png")} alt="Sparebanken logo"/>
-                <Image src={require("../../../public/resources/nrk_logo.png")} alt="NRK logo"/>
-                <Image src={require("../../../public/resources/UIO_LOGO.png")} alt="UIO logo"/>
-                <Image src={require("../../../public/resources/HUAWEI_LOGO.png")} alt="Huawei logo"/>
-            </div>
-        </section>
+        <Partners
+            listOfPartners={partnersMeta}
+        />
         <section className={styles.contact}>
             <div>
                 <h2>Du når oss med</h2>
-                <span><a aria-label="email" href="thomas@rada.no">thomas@rada.no</a> </span>
+                <span><a aria-label="email" href="mailto:thomas@rada.no">thomas@rada.no</a> </span>
                 <span>+47 95 20 24 46</span>
             </div>
             <div>
