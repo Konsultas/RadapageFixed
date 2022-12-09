@@ -49,6 +49,7 @@
     padding: 1rem;
 }
 .companyLogo{
+    position: relative;
     width: 8rem;
 }
 .navBar{
@@ -82,10 +83,11 @@
 
 .navContainer{
     display: flex;
+    position: relative;
     justify-content: center;
 }
 .navbarSmallScreen{
-    display:none;
+    display: flex;
     height: 2.2rem;
     background: none;
     color: white;
@@ -158,12 +160,6 @@
 }
 
 @media (max-width: 470px) {
-    .navBar{
-        display: none;
-    }
-    .navbarSmallScreen{
-        display: flex;
-    }
     .motto{
         padding: 1rem;
         margin-top: 1rem;

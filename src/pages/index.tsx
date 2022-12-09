@@ -6,17 +6,19 @@ import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
     const [hasScrolled, setScrolled] = useState(false);
-
+    const [oldScroll, setOldScroll] = useState(0)
     useEffect(() => {
-       const onScroll: EventListener = (event: Event) => {
-            if(window.scrollY > 200) {
+        
+        const onScroll: EventListener = (event: Event) => {
+            if(window.scrollY > 200 && window.scrollY < oldScroll) {
                 setScrolled(true);
+                console.log("jeg kan ikke progge")
             } else {
                 setScrolled(false);
             }
-            
+             setOldScroll(window.scrollY)
        };
-
+      
        window.addEventListener('scroll', onScroll);
 
        return () => window.removeEventListener('scroll', onScroll);
@@ -28,7 +30,7 @@ const Home: NextPage = () => {
         <div className="body">
             {hasScrolled && (
                 <p className={styles.buttonContainer}>
-                <button tabIndex={0} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={styles.scroll}>Til topp</button>
+                <button tabIndex={0} onClick={() => window.scrollTo({ top: 0})} className={styles.scroll}>Til topp</button>
             </p>
             )}
         <a id="skipToContent" tabIndex={1} href="#innledning">HOPP TIL INNHOLD</a>
