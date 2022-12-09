@@ -8,10 +8,10 @@ export const Footer:NextComponentType = () => {
         <section className={styles.partners}>
            <h2>Noen av våre nåværende og tidligere kunder</h2>
            <div>
-                <Image src={require("../../public/resources/SPAREBANK_LOGO.png")} alt="Sparebanken logo"/>
-                <Image src={require("../../public/resources/nrk_logo.png")} alt="NRK logo"/>
-                <Image src={require("../../public/resources/UIO_LOGO.png")} alt="UIO logo"/>
-                <Image src={require("../../public/resources/HUAWEI_LOGO.png")} alt="Huawei logo"/>
+                <Image src={require("../../../public/resources/SPAREBANK_LOGO.png")} alt="Sparebanken logo"/>
+                <Image src={require("../../../public/resources/nrk_logo.png")} alt="NRK logo"/>
+                <Image src={require("../../../public/resources/UIO_LOGO.png")} alt="UIO logo"/>
+                <Image src={require("../../../public/resources/HUAWEI_LOGO.png")} alt="Huawei logo"/>
             </div>
         </section>
         <section className={styles.contact}>
