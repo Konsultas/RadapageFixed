@@ -5,8 +5,8 @@ import { GetStaticProps, GetStaticPropsResult } from 'next';
 interface Props{
     imgPath:string
     name: string,
-    title: string
-    description: string,
+    title: string,
+    description: string[],
 }
 
 const ProfileComponent:FC<Props> = (props:Props)=>{

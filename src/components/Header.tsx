@@ -4,7 +4,7 @@ export const Header = ()=>{
     return(
       <header>
           <div id="topp" className={styles.navfelt}>
-              <a href="index.html"><Image className={styles.companyLogo} width={130} height={40} src={require("../../public/resources/radaLogo.png")} alt="Rada consulting-logo" /></a>
+              <a href="index.html"><Image className={styles.companyLogo} width={10} height={40} src={require("../../public/resources/radaLogo.png")} alt="Rada consulting-logo" /></a>
               <nav >
                   <ul className={styles.navBar}>
                       <li><a role="button" href="#innledning">Om Oss</a></li>
