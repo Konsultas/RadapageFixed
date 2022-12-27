@@ -43,6 +43,7 @@
 .navfelt{
     background-color: rgba(0, 0, 0, 75%);
     width: 100%;
+    height: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -50,6 +51,7 @@
 }
 .companyLogo{
     width: 8rem;
+    height: 2rem;
 }
 .navBar{
     display: flex;

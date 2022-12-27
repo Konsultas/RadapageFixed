@@ -1,11 +1,18 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import { Layout } from 'src/components/Layout';
-import { Profiles } from '../mainPage/employees/Profiles';
+import Profiles from '../mainPage/employees/Profiles';
 import styles from '@/styles/Home.module.scss';
 import { useEffect, useState } from 'react';
 
-const Home: NextPage = () => {
+interface Props {
+    profiles: any
+}
+
+const Home: NextPage<Props> = (props) => {
     const [hasScrolled, setScrolled] = useState(false);
+    const [colorScroll, setColorScroll] = useState('');
+
+    const { profiles } = props;
 
     useEffect(() => {
        const onScroll: EventListener = (event: Event) => {
@@ -14,7 +21,6 @@ const Home: NextPage = () => {
             } else {
                 setScrolled(false);
             }
-            
        };
 
        window.addEventListener('scroll', onScroll);
@@ -28,8 +34,8 @@ const Home: NextPage = () => {
         <div className="body">
             {hasScrolled && (
                 <p className={styles.buttonContainer}>
-                <button tabIndex={0} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={styles.scroll}>Til topp</button>
-            </p>
+                    <button tabIndex={0} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={`${styles.scroll} ${colorScroll}`}>Til topp</button>
+                </p>
             )}
         <a id="skipToContent" tabIndex={1} href="#innledning">HOPP TIL INNHOLD</a>
         <main className={styles.main}>
@@ -43,7 +49,7 @@ const Home: NextPage = () => {
                     Vi har det morsomt på jobb fordi karriereutvikling skjer best med lave skuldre</p>
             </section>
             <span className={styles.redLine}></span>
-            <Profiles />
+            <Profiles profiles={profiles.data} />
             <span className={styles.redLine}></span>
             <section className={styles.joinTheTeam}>
                 <h2>Join the team!</h2>
@@ -95,6 +101,20 @@ const Home: NextPage = () => {
     </div>
   </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+
+    const res = await fetch('http://localhost:1337/api/profiles?populate=*');
+
+    const profiles: object = await res.json();
+    console.log({profiles});
+
+    return {
+        props: {
+            profiles: profiles
+        }
+    }
 }
 
 export default Home

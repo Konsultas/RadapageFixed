@@ -1,14 +1,15 @@
 import Image from "next/future/image"
 import { FC } from "react"
 import style from "@/styles/mainPageStyles/ProfileComponent.module.scss"
+import { GetStaticProps, GetStaticPropsResult } from 'next';
 interface Props{
     imgPath:string
     name: string,
     title: string
-    description: string[]
+    description: string,
 }
 
-export const ProfileComponent:FC<Props> = (props:Props)=>{
+const ProfileComponent:FC<Props> = (props:Props)=>{
     return( 
         <section className={style.profil}>
             <Image className={style.profilBilde} src={props.imgPath} alt=""/>
@@ -20,8 +21,9 @@ export const ProfileComponent:FC<Props> = (props:Props)=>{
                     <p>{props.title}</p>
                     
                 </div>
-                {props.description.map((el, index) => <p key={`profile${index}`}>{el}</p>)}
+                <p>{props.description}</p>
             </span>
         </section>)
 }
+
 export default ProfileComponent

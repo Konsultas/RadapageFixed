@@ -4,7 +4,7 @@ export const Header = ()=>{
     return(
       <header>
           <div id="topp" className={styles.navfelt}>
-              <a href="index.html"><Image className={styles.companyLogo} src={require("../../public/resources/radaLogo.png")} alt="Rada consulting-logo" /></a>
+              <a href="index.html"><Image className={styles.companyLogo} width={130} height={40} src={require("../../public/resources/radaLogo.png")} alt="Rada consulting-logo" /></a>
               <nav >
                   <ul className={styles.navBar}>
                       <li><a role="button" href="#innledning">Om Oss</a></li>
@@ -18,7 +18,7 @@ export const Header = ()=>{
                           <span className={`${styles.hamburgerBar} ${styles.hamburgerBtn}`}></span>
                       </button>
                       <ul  className={styles.menu}>
-                          <a role="button" className={styles.menuPoint}   href="#innledning">Om Oss</a>
+                          <a role="button" className={styles.menuPoint}  href="#innledning">Om Oss</a>
                           <a role="button" className={styles.menuPoint}  href="#jobbeHer">Jobbe Her?</a>
                           <a role="button" className={styles.menuPoint}  href="#footer">Kontakt</a>
                       </ul>  
