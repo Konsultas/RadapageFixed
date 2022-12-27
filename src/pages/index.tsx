@@ -12,17 +12,20 @@ const Home: NextPage<Props> = (props) => {
     const [hasScrolled, setScrolled] = useState(false);
     const [colorScroll, setColorScroll] = useState('');
 
-    const { profiles } = props;
 
+    const [oldScroll, setOldScroll] = useState(0)
     useEffect(() => {
-       const onScroll: EventListener = (event: Event) => {
-            if(window.scrollY > 200) {
+        
+        const onScroll: EventListener = (event: Event) => {
+            if(window.scrollY > 200 && window.scrollY < oldScroll) {
                 setScrolled(true);
+                console.log("jeg kan ikke progge")
             } else {
                 setScrolled(false);
             }
+             setOldScroll(window.scrollY)
        };
-
+      
        window.addEventListener('scroll', onScroll);
 
        return () => window.removeEventListener('scroll', onScroll);
@@ -49,7 +52,7 @@ const Home: NextPage<Props> = (props) => {
                     Vi har det morsomt på jobb fordi karriereutvikling skjer best med lave skuldre</p>
             </section>
             <span className={styles.redLine}></span>
-            <Profiles profiles={profiles.data} />
+            <Profiles profiles={Profiles} />
             <span className={styles.redLine}></span>
             <section className={styles.joinTheTeam}>
                 <h2>Join the team!</h2>
@@ -101,20 +104,6 @@ const Home: NextPage<Props> = (props) => {
     </div>
   </Layout>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-
-    const res = await fetch('http://localhost:1337/api/profiles?populate=*');
-
-    const profiles: object = await res.json();
-    console.log({profiles});
-
-    return {
-        props: {
-            profiles: profiles
-        }
-    }
 }
 
 export default Home

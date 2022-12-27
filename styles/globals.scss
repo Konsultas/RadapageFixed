@@ -5,6 +5,9 @@
     align-items: center;
     background-color: black;
 }
+html{
+    scroll-behavior:smooth
+}
 main{
     padding: 2rem;
     display: flex;
